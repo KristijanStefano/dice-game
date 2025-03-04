@@ -9,6 +9,16 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
 
 body {
   font-family: "Nunito", sans-serif;
@@ -43,6 +53,16 @@ main .player {
   align-items: center;
   transition: all 0.75s;
 }
+@media (max-width: 768px) {
+  main .player {
+    padding: 9rem 5rem;
+  }
+}
+@media (max-width: 500px) {
+  main .player {
+    padding: 6rem 2rem;
+  }
+}
 main .player .current {
   background-color: #c7366b;
   opacity: 0.8;
@@ -70,6 +90,16 @@ main .player .name {
   word-spacing: 2px;
   font-weight: 300;
   margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  main .player .name {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  main .player .name {
+    font-size: 2.2rem;
+  }
 }
 main .player .score {
   font-size: 8rem;
@@ -111,13 +141,30 @@ main .player--winner .name {
   cursor: pointer;
   font-weight: 400;
   transition: all 0.2s;
-  background-color: white;
+  background-color: #fff;
   background-color: rgba(255, 255, 255, 0.6);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   padding: 0.7rem 2.5rem;
   border-radius: 4px;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: transparent;
+  }
+  .btn span {
+    display: none;
+  }
+}
+@media (max-width: 768px) and (max-width: 500px) {
+  .btn {
+    padding: 0.5rem 1.4rem;
+  }
 }
 .btn::first-letter {
   font-size: 2.4rem;
@@ -148,6 +195,12 @@ main .player--winner .name {
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .dice {
+    height: 9rem;
+    top: 22rem;
+  }
 }
 
 .hidden {

@@ -61,7 +61,7 @@ btnHold.addEventListener('click', function() {
     state.score[currentPlayer] += state.current;
     score[currentPlayer].textContent = state.score[currentPlayer];
     
-    if (state.score[currentPlayer] >= 10) {
+    if (state.score[currentPlayer] >= 100) {
       player[currentPlayer].classList.add('player--winner');
       state.isPlaying = false;
     }

@@ -2,6 +2,7 @@
 
 $primary-color: #c7366b;
 $border-radius: 4px;
+$white: #fff;
 
 * {
   margin: 0;
@@ -12,6 +13,14 @@ $border-radius: 4px;
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  
+  @media (max-width: 768px) {
+    font-size: 60%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 55%;
+  }
 }
 
 body {
@@ -46,11 +55,20 @@ main {
     align-items: center;
     transition: all 0.75s;
 
+    @media (max-width: 768px) {
+      padding: 9rem 5rem;
+    }
+
+    
+    @media (max-width: 500px) { 
+      padding: 6rem 2rem;
+    }
+
     .current {
       background-color: $primary-color;
       opacity: 0.8;
       border-radius: $border-radius;
-      color: #fff;
+      color: $white;
       width: 65%;
       padding: 2rem;
       text-align: center;
@@ -76,6 +94,13 @@ main {
       word-spacing: 2px;
       font-weight: 300;
       margin-bottom: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 3rem;
+      }
+      @media (max-width: 500px) { 
+        font-size: 2.2rem;
+      }
     }
     
     .score {
@@ -114,7 +139,6 @@ main {
 
 /* ELEMENTS */
 
-
 .btn {
   position: absolute;
   left: 50%;
@@ -129,13 +153,28 @@ main {
   font-weight: 400;
   transition: all 0.2s;
 
-  background-color: white;
+  background-color: $white;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;
   border-radius: $border-radius;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: transparent;
+    span {
+      display: none;
+    }
+
+    @media (max-width: 500px) { 
+      padding: 0.5rem 1.4rem;
+    }
+  }
 
   &::first-letter {
     font-size: 2.4rem;
@@ -172,8 +211,12 @@ main {
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-}
 
+  @media (max-width: 768px) {
+    height: 9rem;
+    top: 22rem;
+  }
+}
 
 .hidden {
   display: none;

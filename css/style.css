@@ -82,6 +82,11 @@ main .player .current-label {
 main .player .current-score {
   font-size: 3.5rem;
 }
+@media (max-width: 500px) {
+  main .player .current-score {
+    font-size: 2.5rem;
+  }
+}
 main .player .name {
   position: relative;
   font-size: 4rem;
